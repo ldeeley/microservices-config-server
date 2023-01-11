@@ -1,2 +1,7 @@
 my:
   greeting: Goodbye Cruel World
+spring:
+  application:
+    name: config-client
+server:
+  port: 8080
