@@ -1,5 +1,5 @@
 my:
-  greeting: Hello World from the Album-Service
+  greeting: Hello World from the RocknRoll Album-Service
 spring:
   application:
   datasource:
