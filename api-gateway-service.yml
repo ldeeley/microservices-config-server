@@ -1,1 +1,5 @@
-
+my:
+  greeting: Goodbye Cruel World
+spring:
+  application:
+    name: api-gateway-server
