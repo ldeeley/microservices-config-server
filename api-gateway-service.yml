@@ -3,6 +3,12 @@ my:
 spring:
   application:
     name: api-gateway-server
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lowerCaseServiceId: true
 eureka:
   client:
     register-with-eureka: true
