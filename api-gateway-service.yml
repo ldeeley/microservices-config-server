@@ -23,3 +23,13 @@ management:
   endpoint:
     gateway:
       enabled: 'true'
+logging:
+  level:
+    org:
+      springframework:
+        cloud:
+          gateway:
+            route:
+              RouteDefinitionLocator: INFO
+            nodeValue: TRACE
+    root: INFO
