@@ -6,3 +6,4 @@ eureka:
       defaultZone: http://eurekawhale:8761/eureka/
   instance:
     instance-id: ${spring.application.name}:${spring.application.instance_id:${random.uuid}}
+msg: greeting Hello World from the RocknRoll Album-Service configwhale
