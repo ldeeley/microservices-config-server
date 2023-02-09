@@ -3,7 +3,7 @@ my:
 spring:
   application:
   datasource:
-    url: "jdbc:mysql://rocknroll-microservices-v3-mysqldb-1:3306/album-inventory-service"
+    url: "jdbc:mysql://rocknroll-microservices-v3_default:3306/album-inventory-service"
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: 'password'
