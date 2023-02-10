@@ -2,6 +2,7 @@ my:
   greeting: Hello World from the RocknRoll Album-Service
 spring:
   application:
+      name: rnr-album-service
   datasource:
     url: "jdbc:mysql://localhost:3306/album-inventory-service"
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -19,3 +20,14 @@ server:
 springdoc:
   swagger-ui:
     path: "http://swagger-ui.html"
+spring:
+  datasource:
+    url: "jdbc:mysql://host.docker.internal:3307/album-inventory-service"
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 'password'
+  jpa:
+    hibernate:
+      ddl-auto: create
+    generate-ddl: true
+    show-sql: true
