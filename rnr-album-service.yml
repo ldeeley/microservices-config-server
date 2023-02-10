@@ -2,7 +2,13 @@ my:
   greeting: Hello World from the RocknRoll Album-Service
 spring:
   application:
-      name: rnr-album-service
+      name: rnr-album-service  
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lowerCaseServiceId: true
   datasource:
     url: "jdbc:mysql://host.docker.internal:3307/album-inventory-service"
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -18,3 +24,27 @@ server:
 springdoc:
   swagger-ui:
     path: "http://swagger-ui.html"
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://rnr-eureka-server:8761/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    gateway:
+      enabled: 'true'
+logging:
+  level:
+    org:
+      springframework:
+        cloud:
+          gateway:
+            route:
+              RouteDefinitionLocator: INFO
+            nodeValue: TRACE
+    root: INFO
