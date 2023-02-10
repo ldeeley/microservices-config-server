@@ -9,6 +9,10 @@ spring:
         locator:
           enabled: true
           lowerCaseServiceId: true
+      routes:
+        id: rnr-album-service
+        uri: lb://rnr-album-service
+        predicates: Path=/api/album
 eureka:
   client:
     register-with-eureka: true
