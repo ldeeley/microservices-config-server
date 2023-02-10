@@ -1,5 +1,11 @@
 my:
   greeting: Goodbye Cruel World
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://rnr-eureka-server:8761/eureka/
 spring:
   application:
     name: rnr-api-gateway
@@ -14,12 +20,7 @@ spring:
           uri: lb://rnr-album-service:8083
           predicates: 
           - Path=/api/album
-eureka:
-  client:
-    register-with-eureka: true
-    fetch-registry: true
-    serviceUrl:
-      defaultZone: http://rnr-eureka-server:8761/eureka/
+
 management:
   endpoints:
     web:
