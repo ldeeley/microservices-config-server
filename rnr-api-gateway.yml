@@ -17,7 +17,7 @@ spring:
           lowerCaseServiceId: true
       routes:
         - id: rnr-album-service-routes
-          uri: lb://rnr-album-service:8083
+          uri: lb://rnr-album-service:8080
           predicates: 
           - Path=/api/album
 
