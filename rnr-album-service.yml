@@ -11,7 +11,7 @@ spring:
           lowerCaseServiceId: true
   datasource:
 #     url: "jdbc:mysql://rocknroll-microservices-v3_default:3307/album-inventory-service"
-    url: "jdbc:mysql://127.0.0.1:3307/album-inventory-service"
+    url: "jdbc:mysql://rocknroll-mysql:3307/album-inventory-service"
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: 'secret'
