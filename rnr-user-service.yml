@@ -9,12 +9,11 @@ spring:
         locator:
           enabled: true
           lowerCaseServiceId: true
-  datasource:
-#     url: "jdbc:mysql://rocknroll-microservices-v3_default:3306/album-inventory-service"
-    url: "jdbc:mysql://rnr-mysql:3306/album-inventory-service"
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    username: root
-    password: 'secret'
+  datasource: 
+     url: jdbc:mysql://localhost:3306/rocknrollalbumart
+     username: root
+     password: secret
+     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
       ddl-auto: create
@@ -49,3 +48,6 @@ logging:
               RouteDefinitionLocator: INFO
             nodeValue: TRACE
     root: INFO
+springdoc: 
+  swagger-ui: 
+     path: /swagger-ui.html
