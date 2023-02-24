@@ -1,0 +1,51 @@
+my:
+  greeting: Hello World from the RocknRoll User-Service
+spring:
+  application:
+      name: rnr-user-service  
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lowerCaseServiceId: true
+  datasource:
+#     url: "jdbc:mysql://rocknroll-microservices-v3_default:3306/album-inventory-service"
+    url: "jdbc:mysql://rnr-mysql:3306/album-inventory-service"
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 'secret'
+  jpa:
+    hibernate:
+      ddl-auto: create
+    generate-ddl: true
+    show-sql: true
+server:
+  port: 8080
+springdoc:
+  swagger-ui:
+    path: "http://swagger-ui.html"
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://rnr-eureka-server:8761/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    gateway:
+      enabled: 'true'
+logging:
+  level:
+    org:
+      springframework:
+        cloud:
+          gateway:
+            route:
+              RouteDefinitionLocator: INFO
+            nodeValue: TRACE
+    root: INFO
